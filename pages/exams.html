@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Exams - EduSphere</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">EduSphere</h2>
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="study-materials.html">Study Materials</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="exams.html">Exams</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="exam-hero">
+
+        <h1>Online Examination Portal</h1>
+
+        <p>Practice, Test Your Knowledge and Improve Your Skills.</p>
+
+    </section>
+
+
+    <!-- Exam Categories -->
+
+    <section class="exam-section">
+
+        <h2>Choose Your Subject</h2>
+
+        <div class="exam-categories">
+
+            <button onclick="startQuiz('Python')">Python</button>
+
+            <button onclick="startQuiz('Java')">Java</button>
+
+            <button onclick="startQuiz('HTML')">HTML</button>
+
+            <button onclick="startQuiz('Computer Science')">Computer Science</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quiz Section -->
+
+    <section class="quiz-section" id="quizSection" hidden>
+
+        <h2 id="quizTitle">Python Mock Test</h2>
+
+        <div id="quizQuestions"></div>
+
+        <button id="submitQuiz" onclick="submitQuiz()">
+            Submit Examination
+        </button>
+
+        <div id="quizResult"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 EduSphere. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

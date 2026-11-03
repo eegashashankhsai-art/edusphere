@@ -1,0 +1,1021 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #102a43;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #102a43;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.login-btn {
+    display: inline-block;
+    background: #00b4d8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #00b4d8;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.explore-btn:hover,
+.login-btn:hover {
+    background: #0096b4;
+}
+
+/* Features */
+
+.features {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    color: #102a43;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    display: block;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    color: inherit;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.feature-card[href]:hover,
+.feature-card[href]:focus-visible {
+    box-shadow: 0 8px 20px rgba(16, 42, 67, 0.16);
+    transform: translateY(-4px);
+}
+
+.feature-action {
+    display: inline-block;
+    margin-top: 18px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.feature-unavailable {
+    border: 1px dashed #9aa9b5;
+}
+
+.coming-soon {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 5px 10px;
+    background: #e8eef3;
+    border-radius: 20px;
+    color: #445b6e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.login-card {
+    width: min(100%, 480px);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.12);
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: #555;
+    margin-bottom: 28px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #102a43;
+    font-weight: 600;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cdd9e4;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #f9fbfd;
+    color: #102a43;
+}
+
+.login-submit {
+    margin-top: 8px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #0077b6;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.login-note {
+    margin-top: 22px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #0077b6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    @media (max-width: 520px) {
+
+        .feature-container {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            transition-duration: 0.01ms !important;
+        }
+
+    }
+
+}
+/* About Page */
+
+.about-hero {
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 18px;
+}
+
+.about-content {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #0077b6;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.mission-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 30px 8%;
+}
+
+.mission-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.mission-card h2 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.highlights-section {
+    padding: 50px 5% 10px;
+    text-align: center;
+}
+
+.highlights-section h2 {
+    font-size: 30px;
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #f3fbff, #ffffff);
+    border: 1px solid #dfeaf3;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.highlight-card h3 {
+    color: #0077b6;
+    margin-bottom: 12px;
+}
+
+.highlight-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.who-section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.who-section h2 {
+    font-size: 30px;
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+.student-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.student-card h3 {
+    color: #0077b6;
+    margin-bottom: 12px;
+}
+
+.student-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .mission-container,
+    .highlights-grid,
+    .student-types {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Study Materials Page */
+
+.materials-hero {
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.materials-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.materials-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.materials-search {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.materials-search h2 {
+    color: #102a43;
+    margin-bottom: 20px;
+}
+
+.materials-search input {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.materials-section {
+    padding: 30px 5% 60px;
+    text-align: center;
+}
+
+.materials-section h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.materials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.material-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.material-card .material-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.material-card .material-links a {
+    text-decoration: none;
+    background: #eaf7ff;
+    color: #0077b6;
+    border: 1px solid #d6ebff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.material-card:hover {
+    transform: translateY(-6px);
+}
+
+.material-card h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.material-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.material-card button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.material-card button:hover {
+    background: #102a43;
+}
+
+#searchMessage {
+    margin-top: 25px;
+    color: #0077b6;
+}
+
+@media (max-width: 768px) {
+
+    .materials-container {
+        grid-template-columns: 1fr;
+    }
+
+    .materials-search input {
+        width: 90%;
+    }
+
+    .materials-hero h1 {
+        font-size: 30px;
+    }
+
+}
+/* Career Page */
+
+.career-hero {
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.career-hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.career-hero p {
+    font-size: 18px;
+}
+
+.career-section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.career-section h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.career-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.career-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+}
+
+.career-card h3 {
+    color: #0077b6;
+    margin-bottom: 0;
+}
+
+.career-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.career-card button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.career-card button:hover {
+    background: #102a43;
+}
+
+.career-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.career-links a {
+    display: inline-block;
+    text-decoration: none;
+    background: #eaf7ff;
+    color: #0077b6;
+    border: 1px solid #cfe9ff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.career-roadmap {
+    padding: 0 5% 60px;
+    text-align: center;
+}
+
+.career-roadmap h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.career-roadmap-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.roadmap-card {
+    background: linear-gradient(135deg, #f4fbff, #ffffff);
+    border: 1px solid #dfeaf3;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.roadmap-card span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0077b6;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.roadmap-card h3 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.roadmap-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.it-paths {
+    margin-top: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 30px 20px;
+}
+
+.it-paths h3 {
+    color: #102a43;
+    margin-bottom: 20px;
+}
+
+.path-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.path-tags span {
+    background: #eaf7ff;
+    color: #0077b6;
+    border: 1px solid #cfe9ff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* Skills Section */
+
+.skills-section {
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.skills-section h2 {
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-container span {
+    background: white;
+    color: #0077b6;
+    padding: 15px 25px;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+
+    .career-container,
+    .career-roadmap-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Scholarship Page */
+
+.scholarship-hero {
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.scholarship-hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.scholarship-hero p {
+    font-size: 18px;
+}
+
+.scholarship-section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.scholarship-note {
+    max-width: 700px;
+    margin: -15px auto 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.scholarship-section h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.scholarship-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.scholarship-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+}
+
+.scholarship-card h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.scholarship-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.scholarship-card .scholarship-link {
+    display: inline-block;
+    background: #0077b6;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.scholarship-card .scholarship-link:hover {
+    background: #102a43;
+}
+
+/* Application Process */
+
+.application-section {
+    padding: 45px 5%;
+    text-align: center;
+}
+
+.application-section h2 {
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+.application-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.application-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.application-card h3 {
+    color: #0077b6;
+    margin-bottom: 12px;
+}
+
+.application-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .scholarship-container {
+        grid-template-columns: 1fr;
+    }
+
+    .application-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Online Examination Page */
+
+.exam-hero {
+    background: linear-gradient(135deg, #102a43, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.exam-hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.exam-hero p {
+    font-size: 18px;
+}
+
+.exam-section {
+    padding: 45px 5%;
+    text-align: center;
+}
+
+.exam-section h2 {
+    color: #102a43;
+    margin-bottom: 30px;
+}
+
+.exam-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exam-categories button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.exam-categories button:hover {
+    background: #102a43;
+}
+
+.quiz-section {
+    max-width: 850px;
+    margin: 30px auto 60px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.quiz-section h2 {
+    color: #0077b6;
+    margin-bottom: 25px;
+}
+
+.question-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f4f7fb;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.question-card h3 {
+    margin-bottom: 15px;
+    color: #102a43;
+}
+
+.question-card label {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#submitQuiz {
+    background: #0077b6;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitQuiz:hover {
+    background: #102a43;
+}
+
+#quizResult {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+@media (max-width: 768px) {
+
+    .quiz-section {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .exam-hero h1 {
+        font-size: 30px;
+    }
+
+}
